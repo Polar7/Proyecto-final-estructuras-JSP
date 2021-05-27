@@ -214,12 +214,11 @@
 
             <p><input type="text" placeholder="Numero de clientes" name="txtAgregarNClientesBanco"></p>
 
-
             <p><input type="submit" value="Agregar"></p>
 
         </form>
 
-        <p style="color: black"> ${confirmacionAgregar}</p>
+        <p style="color: black"> ${confirmacionAgregarbancos}</p>
     </div>
 
 
@@ -230,9 +229,10 @@
 
             <p><label> Eliminar banco </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtEliminarTipoProducto" ></p>
+            <p><input type="text" placeholder="Nombre" name="txtEliminarNombreBanco" ></p>
 
             <p><input type="submit" value="Eliminar"></p>
+
 
         </form>
 
@@ -248,9 +248,13 @@
         <form action="modificar-banco.do" method="post">
             <p><label> Modificar banco </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtModificarIdTipoProducto" ></p>
+            <p><input type="text" placeholder="Nombre" name="txtModificarNombreBanco" ></p>
 
-            <p><input type="text" placeholder="Nuevo nombre" name="txtModificarNombreTipoProducto"></p>
+            <p><input type="text" placeholder="NIT" name="txtModificarNITBancos"></p>
+
+            <p><input type="text" placeholder="Direccion" name="txtModificarDireccion"></p>
+
+            <p><input type="text" placeholder="Numero de clientes" name="txtModificarNClientesBanco"></p>
 
             <p><input type="submit" value="Modificar"></p>
 
@@ -267,7 +271,7 @@
 
             <p><label> Buscar por ID banco </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtBuscarPorIdTipoProducto" ></p>
+            <p><input type="text" placeholder="Nombre" name="txtIdNombreBanco" ></p>
 
             <p><input type="submit" value="Buscar por ID"></p>
 
