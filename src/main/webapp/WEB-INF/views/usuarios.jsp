@@ -74,7 +74,7 @@
             border:1px solid black;
             width:49.5%;
             display:inline-block;
-            height:49.5%;
+            height:80%;
             overflow:hidden;
         }
         #uno{
@@ -93,7 +93,7 @@
             background-color:#ffc107;
         }
 
-        .panelesCRUDtiposProductos input[type="submit"] {
+        .panelesCRUDusuarios input[type="submit"] {
             border: none;
             outline: none;
             height: 40px;
@@ -103,13 +103,13 @@
             border-radius: 20px;
         }
 
-        .panelesCRUDtiposProductos input[type="submit"]:hover {
+        .panelesCRUDusuarios input[type="submit"]:hover {
             cursor: pointer;
             background: #35c0cd;
             color: #000;
         }
 
-        .panelesCRUDtiposProductos input[type="text"] {
+        .panelesCRUDusuarios input[type="text"] {
             border: none;
             border-bottom: 1px solid #fff;
             background: #f9f9f9;
@@ -119,7 +119,7 @@
             font-size: 16px;
         }
 
-        .panelesCRUDtiposProductos label {
+        .panelesCRUDusuarios label {
             margin: 0;
             padding: 0;
             font-weight: bold;
@@ -166,10 +166,10 @@
     <div class="panelNavbar">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="principalTipoProducto.do">Tipo Productos</a>
+                <a class="nav-link" href="principalTipoProducto.do">Tipo Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="principalUsuario.do">Usuarios</a>
+                <a class="nav-link active" href="principalUsuario.do">Usuarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="principalBancos.do">Bancos</a>
@@ -196,19 +196,28 @@
     <p>Navegue por las distintas opciones de tu proyecto:</p>
 </div>
 
-<div class="panelesCRUDtiposProductos">
+<div class="panelesCRUDusuarios">
 
     <!--PANELUNO-->
     <div class='recuadro' id="uno">
 
-        <form action="añadir-tipoProducto.do" method="post">
+        <form action="añadir-Usuario.do" method="post">
 
-            <p><label> Agregar tipo producto </label></p>
+            <p><label> Agregar usuario </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtAgregarIdTipoProducto" ></p>
+            <p><input type="text" placeholder="Cedula" name="txtAgregarCedulaUsuario" ></p>
 
-            <p><input type="text" placeholder="Nombre" name="txtAgregarNombreTipoProducto"></p>
+            <p><input type="text" placeholder="Nombre" name="txtAgregarNombreUsuario"></p>
 
+            <p><input type="text" placeholder="Apellido" name="txtAgregarApellidoUsuario"></p>
+
+            <p><input type="text" placeholder="Telefono" name="txtAgregarTelefonoUsuario"></p>
+
+            <p><input type="text" placeholder="Fecha de nacimiento" name="txtAgregarFechaUsuario"></p>
+
+            <p><input type="text" placeholder="Direccion" name="txtAgregarDireccionUsuario"></p>
+
+            <p><input type="text" placeholder="Score" name="txtAgregarScoreUsuario"></p>
 
             <p><input type="submit" value="Agregar"></p>
 
@@ -221,11 +230,11 @@
     <!--PANELDOS-->
     <div class='recuadro' id="dos">
 
-        <form action="eliminar-tipoProducto.do" method="post">
+        <form action="eliminar-usuario.do" method="post">
 
-            <p><label> Eliminar tipo producto </label></p>
+            <p><label> Eliminar usuario </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtEliminarTipoProducto" ></p>
+            <p><input type="text" placeholder="Cedula" name="txtEliminarUsuario" ></p>
 
             <p><input type="submit" value="Eliminar"></p>
 
@@ -240,12 +249,23 @@
     <!--PANELTRES-->
     <div class='recuadro' id="tres">
 
-        <form action="modificar-tipoProducto.do" method="post">
-            <p><label> Modificar tipo producto </label></p>
+        <form action="modificar-usuario.do" method="post">
 
-            <p><input type="text" placeholder="Identificador" name="txtModificarIdTipoProducto" ></p>
+            <p><label> Modificar usuario </label></p>
 
-            <p><input type="text" placeholder="Nuevo nombre" name="txtModificarNombreTipoProducto"></p>
+            <p><input type="text" placeholder="Cedula actual" name="txtModificarCedulaUsuario" ></p>
+
+            <p><input type="text" placeholder="Nombre nuevo" name="txtModificarNombreUsuario"></p>
+
+            <p><input type="text" placeholder="Apellido nuevo" name="txtModificarApellidoUsuario"></p>
+
+            <p><input type="text" placeholder="Telefono nuevo" name="txtModificarTelefonoUsuario"></p>
+
+            <p><input type="text" placeholder="Fecha de nacimiento nuevo" name="txtModificarFechaUsuario"></p>
+
+            <p><input type="text" placeholder="Direccion nuevo" name="txtModificarDireccionUsuario"></p>
+
+            <p><input type="text" placeholder="Score nuevo" name="txtModificarScoreUsuario"></p>
 
             <p><input type="submit" value="Modificar"></p>
 
@@ -258,11 +278,11 @@
     <!--PANELCUATRO-->
     <div class='recuadro' id="cuatro">
 
-        <form action="buscarPorID-tipoProducto.do" method="post">
+        <form action="buscarPorID-usuario.do" method="post">
 
-            <p><label> Buscar por ID tipo producto </label></p>
+            <p><label> Buscar por ID usuario </label></p>
 
-            <p><input type="text" placeholder="Identificador" name="txtBuscarPorIdTipoProducto" ></p>
+            <p><input type="text" placeholder="Cedula" name="txtBuscarPorIDCedula" ></p>
 
             <p><input type="submit" value="Buscar por ID"></p>
 
@@ -274,9 +294,9 @@
 
     <div class='recuadro' id="cinco">
 
-        <form action="mostrarTodosID-tipoProducto.do" method="post">
+        <form action="mostrarTodos-usuarios.do" method="post">
 
-            <p><label> Mostrar todos los tipo productos</label></p>
+            <p><label> Mostrar todos los usuarios</label></p>
 
 
             <p><input type="submit" value="Mostrar todos"></p>
