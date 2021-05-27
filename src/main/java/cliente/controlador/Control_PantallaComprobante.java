@@ -21,9 +21,17 @@ public class Control_PantallaComprobante
         mostrarVentana();
     }
 
+
+    public static Lista<Object> darObjeto()
+    {
+        return objetoRecibido;
+    }
+
     /**
      * Muestra una ventana de confirmacion tras realizar una operacion
      */
+
+
     public static void mostrarVentana()
     {
 
@@ -93,6 +101,8 @@ public class Control_PantallaComprobante
 
         }
     }
+
+
 
     /**
      * Crea una ventana de confirmacion

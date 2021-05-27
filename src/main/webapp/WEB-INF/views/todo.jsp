@@ -254,24 +254,37 @@
         <!--PANELUNO-->
         <div class='recuadro' id="uno">
 
-            <p><label> Agregar tipo producto </label></p>
+            <form action="añadir-tipoProducto.do" method="post">
 
-            <p><input type="text" placeholder="Identificador" ></p>
+                 <p><label> Agregar tipo producto </label></p>
 
-            <p><input type="text" placeholder="Nombre"></p>
+                  <p><input type="text" placeholder="Identificador" name="txtAgregarIdTipoProducto" ></p>
 
-            <p><input type="submit" value="Agregar"></p>
+                   <p><input type="text" placeholder="Nombre" name="txtAgregarNombreTipoProducto"></p>
+
+
+                   <p><input type="submit" value="Agregar"></p>
+
+            </form>
+
+            <p style="color: black"> ${confirmacionAgregar}</p>
          </div>
 
 
         <!--PANELDOS-->
         <div class='recuadro' id="dos">
 
-            <p><label> Eliminar tipo producto </label></p>
+            <form action="eliminar-tipoProducto.do" method="post">
 
-            <p><input type="text" placeholder="Identificador" ></p>
+                 <p><label> Eliminar tipo producto </label></p>
 
-            <p><input type="submit" value="Eliminar"></p>
+                 <p><input type="text" placeholder="Identificador" name="txtEliminarTipoProducto" ></p>
+
+                 <p><input type="submit" value="Eliminar"></p>
+
+            </form>
+
+            <p style="color: black"> ${confirmacionEliminar}</p>
 
         </div>
 
@@ -279,29 +292,48 @@
 
         <!--PANELTRES-->
         <div class='recuadro' id="tres">
-            <p><label> Modificar tipo producto </label></p>
 
-            <p><input type="text" placeholder="Identificador" ></p>
+            <form action="modificar-tipoProducto.do" method="post">
+                 <p><label> Modificar tipo producto </label></p>
 
-            <p><input type="text" placeholder="Nombre"></p>
+                 <p><input type="text" placeholder="Identificador" name="txtModificarIdTipoProducto" ></p>
 
-            <p><input type="submit" value="Modificar"></p>
+                 <p><input type="text" placeholder="Nuevo nombre" name="txtModificarNombreTipoProducto"></p>
+
+                 <p><input type="submit" value="Modificar"></p>
+
+
+            </form>
+
+            <p style="color: black"> ${confirmacionModificar}</p>
         </div>
 
         <!--PANELCUATRO-->
         <div class='recuadro' id="cuatro">
-            <p><label> Buscar por ID tipo producto </label></p>
 
-            <p><input type="text" placeholder="Identificador" ></p>
+            <form action="buscarPorID-tipoProducto.do" method="post">
 
-            <p><input type="submit" value="Buscar por ID"></p>
+                <p><label> Buscar por ID tipo producto </label></p>
+
+                <p><input type="text" placeholder="Identificador" name="txtBuscarPorIdTipoProducto" ></p>
+
+                <p><input type="submit" value="Buscar por ID"></p>
+
+                <p style="color: black"> ${confirmacionBuscarPorID}</p>
+
+            </form>
 
         </div>
 
         <div class="grillaMostrar">
 
             <p><label> Mostrar todos los tipo productos</label></p>
-            <p><input type="submit" value="Mostrar todos"></p>
+            <form action="mostrarTodosID-tipoProducto.do" method="post">
+
+                 <p><input type="submit" value="Mostrar todos"></p>
+            </form>
+
+
             <table>
                 <tr>
                     <th>Numero</th>
@@ -323,6 +355,7 @@
         </div>
 
     </div>
+
 
 
           <script src="webjars/jquery/3.6.0/src/jquery.js"></script>
