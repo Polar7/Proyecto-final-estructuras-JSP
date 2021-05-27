@@ -69,7 +69,7 @@
                 border:1px solid black;
                 width:49.5%;
                 display:inline-block;
-                height:49.5%;
+                height:30%;
                 overflow:hidden;
             }
             #uno{

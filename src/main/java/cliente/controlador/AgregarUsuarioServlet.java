@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @WebServlet(urlPatterns = "/añadir-Usuario.do")
 public class AgregarUsuarioServlet extends HttpServlet
@@ -25,7 +27,16 @@ public class AgregarUsuarioServlet extends HttpServlet
         String direccion = request.getParameter("txtAgregarDireccionUsuario");
         String score = request.getParameter("txtAgregarScoreUsuario");
 
-        Control_paso.conversionAgregarUsuario(Integer.parseInt(cedula), nombre, apellido, Integer.parseInt(telefono), Date.valueOf(fechaNacimiento), direccion, Integer.parseInt(score));
+        SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
+        Date nacimiento= null;
+        try {
+            nacimiento = formatter1.parse(fechaNacimiento);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        Control_paso.conversionAgregarUsuario(Integer.parseInt(cedula), nombre, apellido, Integer.parseInt(telefono), nacimiento, direccion, Integer.parseInt(score));
 
         Lista<Object> objeto = Control_PantallaComprobante.darObjeto();
 
@@ -43,6 +54,6 @@ public class AgregarUsuarioServlet extends HttpServlet
                 }
             }
         }
-        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/usuarios.jsp").forward(request, response);
     }
 }

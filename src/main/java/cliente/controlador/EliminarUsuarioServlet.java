@@ -37,7 +37,7 @@ public class EliminarUsuarioServlet extends HttpServlet
             }
         }
 
-        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/usuarios.jsp").forward(request, response);
 
     }
 }

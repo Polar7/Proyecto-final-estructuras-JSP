@@ -18,7 +18,7 @@ public class Control_PantallaComprobante
     public static void recibirParaMostrarConfirmacion (Lista<Object> pObjetoRecibido)
     {
         objetoRecibido = pObjetoRecibido;
-        mostrarVentana();
+    //    mostrarVentana();
     }
 
 
