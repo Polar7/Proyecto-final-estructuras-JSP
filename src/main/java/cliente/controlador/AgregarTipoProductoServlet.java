@@ -42,7 +42,7 @@ public class AgregarTipoProductoServlet extends HttpServlet
 
 
 
-        request.getRequestDispatcher("WEB-INF/views/todo.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
 
 
     }

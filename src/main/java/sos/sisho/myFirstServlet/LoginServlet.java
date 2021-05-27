@@ -35,7 +35,7 @@ public class LoginServlet  extends HttpServlet {
 
         if( userValid){
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("todo.do");
+            response.sendRedirect("principalTipoProducto.do");
 
         }
         else{

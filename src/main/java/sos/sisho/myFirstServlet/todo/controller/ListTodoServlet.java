@@ -17,6 +17,6 @@ public class ListTodoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("todos", todoService.retrievedTodos());
-        request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/views/tipoProducto.jsp").forward(request,response);
     }
 }

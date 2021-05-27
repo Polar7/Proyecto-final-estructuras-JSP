@@ -31,6 +31,6 @@ public class BuscarPorIDServlet extends HttpServlet
                 request.setAttribute("confirmacionBuscarPorID", objeto.getValor(0).toString());
             }
         }
-        request.getRequestDispatcher("WEB-INF/views/todo.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
     }
 }

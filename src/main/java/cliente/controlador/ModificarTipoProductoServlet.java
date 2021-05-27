@@ -36,6 +36,6 @@ public class ModificarTipoProductoServlet extends HttpServlet
             }
         }
 
-        request.getRequestDispatcher("WEB-INF/views/todo.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
     }
 }

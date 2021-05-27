@@ -35,12 +35,13 @@ public class MostrarTodosTipoProductoServlet extends HttpServlet
         else
         {
             request.setAttribute("confirmacionMostrarTodos", objeto);
-           /* for (int i = 0; i < objeto.getTamanio(); i++ )
+            /*for (int i = 0; i < objeto.getTamanio(); i++ )
             {
                 request.setAttribute("datoActual", objeto.getValor(i).toString() );
             }*/
 
         }
-        request.getRequestDispatcher("WEB-INF/views/todo.jsp").forward(request, response);
+
+        request.getRequestDispatcher("WEB-INF/views/tipoProducto.jsp").forward(request, response);
     }
 }
