@@ -17,7 +17,7 @@ public class DataSource
 
 		try
 		{
-			conProperties.load(new FileInputStream("src/servidor/persistencia/data/connection.properties"));
+			conProperties.load(new FileInputStream("src/main/java/Servidor/persistencia/data/connection.properties"));
 
 			String url = conProperties.getProperty("url");
 			String user = conProperties.getProperty("user");
