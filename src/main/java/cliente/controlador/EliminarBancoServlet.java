@@ -28,11 +28,11 @@ public class EliminarBancoServlet extends HttpServlet
             {
                 if((Boolean)objeto.getValor(0) == true)
                 {
-                    request.setAttribute("confirmacionEliminar", "Se ha ejecutado correctamente la instruccion");
+                    request.setAttribute("confirmacionEliminarbancos", "Se ha ejecutado correctamente la instruccion");
                 }
                 else if((Boolean)objeto.getValor(0) == false)
                 {
-                    request.setAttribute("confirmacionEliminar", "NO se ha ejecutado correctamente la instruccion");
+                    request.setAttribute("confirmacionEliminarbancos", "NO se ha ejecutado correctamente la instruccion");
                 }
             }
         }

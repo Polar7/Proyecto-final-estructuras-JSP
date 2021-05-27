@@ -236,7 +236,7 @@
 
         </form>
 
-        <p style="color: black"> ${confirmacionEliminar}</p>
+        <p style="color: black"> ${confirmacionEliminarbancos}</p>
 
     </div>
 
@@ -261,7 +261,7 @@
 
         </form>
 
-        <p style="color: black"> ${confirmacionModificar}</p>
+        <p style="color: black"> ${confirmacionModificarbancos}</p>
     </div>
 
     <!--PANELCUATRO-->
@@ -275,7 +275,7 @@
 
             <p><input type="submit" value="Buscar por ID"></p>
 
-            <p style="color: black"> ${confirmacionBuscarPorID}</p>
+            <p style="color: black"> ${confirmacionBuscarPorIDbanco}</p>
 
         </form>
 
