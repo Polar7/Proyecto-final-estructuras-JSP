@@ -2,6 +2,9 @@ package cliente.controlador;
 
 import cliente.socketCliente.TCPEchoClient;
 
+ // A donde mi rey?
+
+
 public class Control_conexion
 {
 
